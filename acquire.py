@@ -9,4 +9,6 @@ def get_mall_data():
         print('this file exists, reading from csv')
         #read from csv
         df = pd.read_csv(filename, index_col=0)
+        #renames genre column to gender
+        df = df.rename(columns={"Genre": "Gender"})
         return df
